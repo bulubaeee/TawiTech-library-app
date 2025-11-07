@@ -1,9 +1,9 @@
 <template>
   <div 
     class="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center text-center"
-    style="background-image: url('../src/assets/image.webp')"
+     style="background-image: url('../src/assets/image.webp')"
   >
-    <div class="absolute inset-0 bg-black/40 backdrop-blur-[5px]"></div>
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-[4px]"></div>
 
     <div class="relative z-10 bg-white/20 border border-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-10 max-w-5xl w-[90%]">
       <h1 class="text-7xl md:text-8xl text-white font-bold mb-8 drop-shadow-lg">
@@ -23,6 +23,7 @@
         @editBook="editBook"
       />
 
+  
       <BookDetails v-if="selectedBook" :book="selectedBook"/>
     </div>
   </div>
@@ -36,9 +37,10 @@ import BookDetails from './components/BookDetails.vue'
 
 import { db, collection, getDocs, addDoc, updateDoc, doc } from './firebase'
 
+
 const books = ref([])         
 const selectedBook = ref(null) 
-const editingBook = ref(null) 
+const editingBook = ref(null)  
 
 const booksCollection = collection(db, 'books')
 
@@ -48,9 +50,7 @@ async function fetchBooks() {
   books.value = snapshot.docs.map(d => ({ id: d.id, ...d.data() }))
 }
 
-
 onMounted(fetchBooks)
-
 
 async function addBook(book) {
   await addDoc(booksCollection, book)
@@ -63,7 +63,6 @@ async function updateBook(book) {
   editingBook.value = null
   await fetchBooks()
 }
-
 
 function selectBook(book) {
   selectedBook.value = book
