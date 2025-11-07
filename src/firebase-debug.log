@@ -1,0 +1,44 @@
+[debug] [2025-11-07T11:58:43.966Z] ----------------------------------------------------------------------
+[debug] [2025-11-07T11:58:43.968Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\buluba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-11-07T11:58:43.968Z] CLI Version:   14.24.0
+[debug] [2025-11-07T11:58:43.968Z] Platform:      win32
+[debug] [2025-11-07T11:58:43.968Z] Node Version:  v24.11.0
+[debug] [2025-11-07T11:58:43.968Z] Time:          Fri Nov 07 2025 19:58:43 GMT+0800 (Philippine Standard Time)
+[debug] [2025-11-07T11:58:43.968Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\buluba\Projects\library-app\src
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-07T12:02:32.360Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-07T12:02:32.360Z] > authorizing via signed-in user (francisqwaszx@gmail.com)
+[debug] [2025-11-07T12:02:32.361Z] Checked if tokens are valid: true, expires at: 1762520200145
+[debug] [2025-11-07T12:02:32.361Z] Checked if tokens are valid: true, expires at: 1762520200145
+[debug] [2025-11-07T12:02:32.362Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-11-07T12:02:32.948Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-07T12:02:32.948Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Hosting Setup
+[debug] [2025-11-07T12:02:45.526Z] Checked if tokens are valid: true, expires at: 1762520200145
+[debug] [2025-11-07T12:02:45.526Z] Checked if tokens are valid: true, expires at: 1762520200145
+[debug] [2025-11-07T12:02:45.526Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/library-app-9e7d7 [none]
+[debug] [2025-11-07T12:03:15.541Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/library-app-9e7d7, {"headers":{},"method":"GET","signal":{"reason":""}}): AbortError: The user aborted a request.
+[debug] [2025-11-07T12:03:15.541Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/library-app-9e7d7 (original: The user aborted a request.)
+[debug] [2025-11-07T12:03:15.607Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/library-app-9e7d7
+    at RetryOperation._fn (C:\Users\buluba\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:267:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project library-app-9e7d7. Please make sure the project exists and your account has permission to access it.
